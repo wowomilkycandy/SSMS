@@ -350,7 +350,7 @@
 										$('#dataList').datagrid("options").queryParams = {clazzid: clazzid};
 										$("#dataList").datagrid("reload");
 										$("#dataList").datagrid("uncheckAll");
-										
+
 										$("#gradeList").combobox('setValue', gradeid);
 							  			setTimeout(function(){
 											$("#clazzList").combobox('setValue', clazzid);

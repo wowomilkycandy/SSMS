@@ -44,9 +44,9 @@ public class StudentService {
 		params.add(student.getBirthday());
 		
 		if(student.getGrade() == null || student.getClazz() == null){
-			sql = "UPDATE STU SET name=?, sex=?, birthday=? WHERE number=?";
+			sql = "UPDATE student SET name=?, sex=?, birthday=? WHERE number=?";
 		} else{
-			sql = "UPDATE STU SET name=?, sex=?, birthday=?, clazzid=?, gradeid=? WHERE number=?";
+			sql = "UPDATE student SET name=?, sex=?, birthday=?, clazzid=?, gradeid=? WHERE number=?";
 			params.add(student.getClazzid());
 			params.add(student.getGradeid());
 		}
