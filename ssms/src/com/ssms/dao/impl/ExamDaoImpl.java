@@ -18,7 +18,7 @@ import com.ssms.tools.MysqlTool;
 
 /**
  * 
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class ExamDaoImpl extends BaseDaoImpl implements ExamDaoInter {

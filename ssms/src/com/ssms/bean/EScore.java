@@ -2,7 +2,7 @@ package com.ssms.bean;
 
 /**
  * 考试成绩类
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class EScore {

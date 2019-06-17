@@ -2,7 +2,7 @@ package com.ssms.bean;
 
 /**
  * 系统用户类
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class User {

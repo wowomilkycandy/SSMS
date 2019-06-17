@@ -20,7 +20,7 @@ import com.ssms.tools.StringTool;
 
 /**
  * 学生类Servlet
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class StudentServlet extends HttpServlet {

@@ -9,7 +9,7 @@ import com.ssms.dao.impl.BaseDaoImpl;
 
 /**
  * 系统初始化
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class SystemInitListener implements ServletContextListener {

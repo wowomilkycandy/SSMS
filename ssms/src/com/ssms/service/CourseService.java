@@ -1,24 +1,31 @@
 package com.ssms.service;
 
-import java.sql.Connection;
-import java.util.List;
-
+import com.ssms.bean.Clazz;
 import com.ssms.bean.Course;
+import com.ssms.bean.Grade;
+import com.ssms.bean.Student;
 import com.ssms.dao.impl.BaseDaoImpl;
 import com.ssms.dao.inter.BaseDaoInter;
 import com.ssms.tools.MysqlTool;
 import com.ssms.tools.StringTool;
-
 import net.sf.json.JSONArray;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 课程服务层
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class CourseService {
 	
-	BaseDaoInter dao = new BaseDaoImpl();
+	BaseDaoInter dao = new BaseDaoImpl() {
+
+    };
 	
 	/**
 	 * 获取所有课程
@@ -38,6 +45,8 @@ public class CourseService {
         
         return result;
 	}
+
+
 
 	/**
 	 * 添加课程
@@ -78,8 +87,34 @@ public class CourseService {
 			MysqlTool.closeConnection();
 		}
 	}
-	
-	
-	
-	
+
+
+	public String getStudentList(String courseid) {
+
+
+		List<Object> list;
+		if(StringTool.isEmpty(courseid)){
+			list = dao.getList(Student.class, "SELECT * FROM student");
+		} else{
+			list = dao.getList(Student.class,
+					"SELECT * FROM student WHERE gradeid in (SELECT gradeid FROM grade_course WHERE courseid=?)",
+					new Object[]{Integer.parseInt(courseid)});
+		}
+		List<Map<String,String>> mapList =new ArrayList<>();
+
+		for(Object object : list){
+			Student student = (Student)object;
+			Grade grade = (Grade)dao.getObject(Grade.class,"SELECT * FROM grade WHERE id=?",new Object[]{student.getGradeid()});
+			Clazz clazz = (Clazz)dao.getObject(Clazz.class,"SELECT * FROM clazz WHERE id=?",new Object[]{student.getClazzid()});
+			Map<String,String> map = new HashMap<>();
+			map.put("number", student.getNumber());
+			map.put("name", student.getName());
+			map.put("clazz", clazz.getName());
+			map.put("grade", grade.getName());
+			mapList.add(map);
+		}
+		//json化
+		String result = JSONArray.fromObject(mapList).toString();
+		return result;
+	}
 }

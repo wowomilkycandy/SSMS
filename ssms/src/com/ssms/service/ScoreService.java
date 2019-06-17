@@ -21,7 +21,7 @@ import net.sf.json.JSONArray;
 
 /**
  * 成绩类服务层
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class ScoreService {

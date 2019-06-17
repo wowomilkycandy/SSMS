@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * 基础Dao层
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 @SuppressWarnings("unchecked")

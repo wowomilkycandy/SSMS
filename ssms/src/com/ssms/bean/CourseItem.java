@@ -2,7 +2,7 @@ package com.ssms.bean;
 
 /**
  * 教师与课程的具体对应
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class CourseItem {

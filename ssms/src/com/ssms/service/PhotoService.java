@@ -17,7 +17,7 @@ import com.lizhou.fileload.FileUpload;
 
 /**
  * 上传照片
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class PhotoService {

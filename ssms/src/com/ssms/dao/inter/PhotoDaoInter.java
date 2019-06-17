@@ -8,7 +8,7 @@ import com.ssms.bean.User;
 
 /**
  * 上传照片
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public interface PhotoDaoInter {

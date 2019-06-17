@@ -19,7 +19,7 @@ import com.ssms.tools.MysqlTool;
 
 /**
  * 教师数据层
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class TeacherDaoImpl extends BaseDaoImpl implements TeacherDaoInter {

@@ -10,6 +10,12 @@ import com.ssms.bean.Page;
 import com.ssms.service.ClazzService;
 import com.ssms.tools.StringTool;
 
+/**
+ * 班级
+ * @author liuzhuojin
+ *
+ */
+
 public class ClazzServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
       

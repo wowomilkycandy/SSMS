@@ -27,8 +27,7 @@ public class ExcelTool<T> {
 	/**
 	 * 导入Excel
 	 * @param type
-	 * @param filePath
-	 * @return
+	 * @return list
 	 * @throws IOException 
 	 * @throws FileNotFoundException 
 	 * @throws IllegalAccessException 

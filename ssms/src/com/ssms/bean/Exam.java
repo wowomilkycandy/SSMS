@@ -10,7 +10,7 @@ import java.util.Date;
  * 考试分为年级统考和平时考试两种
  * 年级统考由管理员添加一次考试
  * 平时考试由科任老师添加考试
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class Exam {

@@ -8,7 +8,7 @@ import com.ssms.bean.Teacher;
 
 /**
  * 操作教师的数据层接口
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public interface TeacherDaoInter extends BaseDaoInter {

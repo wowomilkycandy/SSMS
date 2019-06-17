@@ -21,7 +21,7 @@ import com.ssms.bean.User;
 
 /**
  * 教师类Servlet
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class TeacherServlet extends HttpServlet {

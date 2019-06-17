@@ -15,7 +15,7 @@ import com.ssms.tools.StringTool;
 
 /**
  * 上传照片Servlet
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class PhotoServlet extends HttpServlet {

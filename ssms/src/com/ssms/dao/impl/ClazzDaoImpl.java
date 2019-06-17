@@ -14,6 +14,14 @@ import com.ssms.dao.inter.ClazzDaoInter;
 import com.ssms.tools.MysqlTool;
 import com.ssms.tools.StringTool;
 
+/**
+ *
+ * @author liuzhuojin
+ *
+ */
+
+
+
 public class ClazzDaoImpl extends BaseDaoImpl implements ClazzDaoInter {
 
 	public List<Clazz> getClazzDetailList(String gradeid, Page page) {

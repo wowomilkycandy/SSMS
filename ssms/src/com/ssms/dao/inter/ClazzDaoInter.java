@@ -7,7 +7,7 @@ import com.ssms.bean.Page;
 
 /**
  * 班级数据层接口
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public interface ClazzDaoInter extends BaseDaoInter {

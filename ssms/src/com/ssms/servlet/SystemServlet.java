@@ -14,7 +14,7 @@ import com.ssms.service.SystemService;
 
 /**
  * 系统类
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class SystemServlet extends HttpServlet {

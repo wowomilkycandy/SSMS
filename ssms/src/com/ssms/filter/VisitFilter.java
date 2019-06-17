@@ -15,7 +15,7 @@ import com.ssms.bean.User;
 
 /**
  * 如果用户没有登录，返回登录界面
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class VisitFilter implements Filter {

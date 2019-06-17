@@ -2,7 +2,7 @@ package com.ssms.bean;
 
 /**
  * 系统初始化的一些信息
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class SystemInfo {

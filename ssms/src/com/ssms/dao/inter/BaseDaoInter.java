@@ -1,12 +1,15 @@
 package com.ssms.dao.inter;
 
+import com.ssms.bean.Course;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 基础dao
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 @SuppressWarnings("rawtypes")
@@ -233,9 +236,11 @@ public interface BaseDaoInter {
 	/**
 	 * 获取数据表某列的所有值
 	 * @param sql
-	 * @param params 参数
+	 * @param param 参数
 	 * @return
 	 */
 	List<String> getColumn(String sql, Object[] param);
-	
+
+
+
 }

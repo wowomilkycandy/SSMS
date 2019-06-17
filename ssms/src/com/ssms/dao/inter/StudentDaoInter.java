@@ -6,7 +6,7 @@ import com.ssms.bean.Student;
 
 /**
  * 操作学生的数据层接口
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public interface StudentDaoInter extends BaseDaoInter {

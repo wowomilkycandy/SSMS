@@ -4,7 +4,7 @@ import com.ssms.dao.inter.SystemDaoInter;
 
 /**
  * 系统数据层
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class SystemDaoImpl extends BaseDaoImpl implements SystemDaoInter {

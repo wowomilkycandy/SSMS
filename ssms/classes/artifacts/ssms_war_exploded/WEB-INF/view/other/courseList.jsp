@@ -68,8 +68,62 @@
             	});
             }
 	    });
-	  	
-	  	//设置添加窗口
+
+
+        //查看课程选中成绩
+        $("#stuView").click(function(){
+
+            var course = $("#dataList").datagrid("getSelected");
+            if(course == null){
+                $.messager.alert("消息提醒", "请选择课程进行成绩查询!", "warning");
+            } else{
+                var data = {courseid: course.id, name: course.name };
+
+                setTimeout(function(){
+                    $("#studentList").datagrid("options").url = "CourseServlet?method=StudentList&t="+new Date().getTime();
+                    $("#studentList").datagrid("options").queryParams = data;
+                    $("#studentList").datagrid("reload");
+
+                    $("#studentListDialog").dialog("open");
+                }, 100)
+            }
+        });
+
+        //考试成绩窗口
+        $("#studentListDialog").dialog({
+            title: "选课学生列表",
+            width: 850,
+            height: 550,
+            iconCls: "icon-chart_bar",
+            modal: true,
+            collapsible: false,
+            minimizable: false,
+            maximizable: false,
+            draggable: true,
+            closed: true
+        });
+
+        //成绩列表
+        $('#studentList').datagrid({
+            border: true,
+            collapsible: false,//是否可折叠的
+            fit: true,//自动大小
+            method: "post",
+            noheader: true,
+            singleSelect: true,//是否单选
+            rownumbers: true,//行号
+            sortOrder:'ASC',
+            remoteSort: false,
+            toolbar: "#studentToolbar",
+            frozenColumns: [[
+                {field:'number',title:'学号',width:120,resizable: false,sortable:true},
+                {field:'name',title:'姓名',width:120,resizable: false, sortable:true},
+				{field:'clazz',title:'班级',width:120,resizable:false,sortable:true},
+				{field:'grade',title:'年级',width:120,resizable:false,resortable:true}
+            ]]
+        });
+
+        //设置添加窗口
 	    $("#addDialog").dialog({
 	    	title: "添加课程",
 	    	width: 450,
@@ -137,8 +191,19 @@
 	<div id="toolbar">
 		<div style="float: left;"><a id="add" href="javascript:;" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">添加</a></div>
 			<div style="float: left;" class="datagrid-btn-separator"></div>
-		<div><a id="delete" href="javascript:;" class="easyui-linkbutton" data-options="iconCls:'icon-some-delete',plain:true">删除</a></div>
+		<div style="float:left;"><a id="delete" href="javascript:;" class="easyui-linkbutton" data-options="iconCls:'icon-some-delete',plain:true">删除</a></div>
+		<div><a id="stuView" href="javascript:;" class="easyui-linkbutton" data-options="iconCls:'icon-chart_bar',plain:true">查看选课学生</a></div>
+
 	</div>
+
+
+	<!-- 课程学生表 -->
+	<div id="studentListDialog">
+		<table id="studentList" cellspacing="0" cellpadding="0">
+
+		</table>
+	</div>
+
 	
 	<!-- 添加数据窗口 -->
 	<div id="addDialog" style="padding: 10px">  

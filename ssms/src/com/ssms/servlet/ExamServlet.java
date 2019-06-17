@@ -18,7 +18,7 @@ import org.apache.commons.beanutils.BeanUtils;
 
 /**
  * 考试类Servlet
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class ExamServlet extends HttpServlet {

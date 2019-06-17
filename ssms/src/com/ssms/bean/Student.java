@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * 学生类
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class Student {

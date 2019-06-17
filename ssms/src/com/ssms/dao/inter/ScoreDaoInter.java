@@ -8,8 +8,7 @@ import com.ssms.bean.Exam;
 
 /**
  * 操作成绩的数据层接口
- * @author bojiangzhou
- *
+ * @author liuzhuojin
  */
 public interface ScoreDaoInter extends BaseDaoInter {
 	

@@ -16,7 +16,7 @@ import com.ssms.tools.VCodeGenerator;
 
 /**
  * 验证码
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class LoginServlet extends HttpServlet {

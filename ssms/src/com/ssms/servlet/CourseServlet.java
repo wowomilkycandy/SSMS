@@ -1,17 +1,21 @@
 package com.ssms.servlet;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ssms.bean.Course;
+import com.ssms.bean.Exam;
 import com.ssms.service.CourseService;
+import org.apache.commons.beanutils.BeanUtils;
 
 /**
  * 课程
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class CourseServlet extends HttpServlet {
@@ -37,10 +41,21 @@ public class CourseServlet extends HttpServlet {
 			addCourse(request, response);
 		} else if("deleteCourse".equalsIgnoreCase(method)){ //删除课程
 			deleteCourse(request, response);
+		} else if("StudentList".equalsIgnoreCase(method)){
+			studentList(request,response);
 		}
-		
 	}
-	
+
+	private void studentList(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		String courseid = request.getParameter("courseid");
+
+		String result = service.getStudentList(courseid);
+		//返回数据
+		response.getWriter().write(result);
+	}
+
+
+
 	private void deleteCourse(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		int courseid = Integer.parseInt(request.getParameter("courseid"));
 		try {

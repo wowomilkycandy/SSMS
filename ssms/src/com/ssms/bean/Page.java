@@ -2,7 +2,7 @@ package com.ssms.bean;
 
 /**
  * 封装分页参数
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class Page {

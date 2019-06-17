@@ -16,7 +16,7 @@ import com.ssms.service.ScoreService;
 
 /**
  * 成绩类Servlet
- * @author bojiangzhou
+ * @author liuzhuojin
  *
  */
 public class ScoreServlet extends HttpServlet {

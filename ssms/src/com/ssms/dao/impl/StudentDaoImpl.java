@@ -14,6 +14,11 @@ import com.ssms.dao.inter.StudentDaoInter;
 import com.ssms.tools.MysqlTool;
 import org.apache.commons.beanutils.BeanUtils;
 
+/*
+* 学生数据层
+* @author liuzhuojin
+* */
+
 public class StudentDaoImpl extends BaseDaoImpl implements StudentDaoInter {
 
 	public List<Student> getStudentList(String sql, List<Object> param) {
